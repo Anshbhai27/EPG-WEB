@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">TV Schedule</h1>
+        
+        <!-- Date Selector -->
+        <div class="mb-6 text-center">
+            <input type="date" id="dateSelector" class="bg-gray-800 px-4 py-2 rounded">
+            <button onclick="fetchSchedule()" class="bg-blue-600 px-4 py-2 rounded ml-2">Load Schedule</button>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="hidden">
+            <div class="flex justify-center items-center">
+                <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-white"></div>
+            </div>
+        </div>
+
+        <!-- Schedule Container -->
+        <div id="scheduleContainer" class="space-y-4"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
