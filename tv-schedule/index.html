@@ -7,27 +7,26 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-900 text-white">
-    <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center mb-8">TV Schedule</h1>
-        
-        <!-- Date Selector -->
-        <div class="mb-6 text-center">
-            <input type="date" id="dateSelector" class="bg-gray-800 px-4 py-2 rounded">
-            <button onclick="fetchSchedule()" class="bg-blue-600 px-4 py-2 rounded ml-2">Load Schedule</button>
-        </div>
-
-        <!-- Loading Spinner -->
-        <div id="loading" class="hidden">
-            <div class="flex justify-center items-center">
-                <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-white"></div>
+<body class="bg-black text-white">
+    <div class="container mx-auto p-4">
+        <header class="mb-8">
+            <h1 class="text-4xl font-bold text-center">TV Schedule</h1>
+            <div class="flex justify-center mt-4 space-x-4">
+                <input type="date" id="dateSelector" class="bg-gray-800 px-4 py-2 rounded">
+                <select id="channelSelector" class="bg-gray-800 px-4 py-2 rounded">
+                    <option value="114">Star Plus HD</option>
+                    <option value="115">Sony HD</option>
+                    <option value="116">Zee TV HD</option>
+                </select>
             </div>
+        </header>
+
+        <div id="loading" class="text-center hidden">
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-white"></div>
         </div>
 
-        <!-- Schedule Container -->
-        <div id="scheduleContainer" class="space-y-4"></div>
+        <div id="scheduleContainer" class="grid gap-4"></div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
