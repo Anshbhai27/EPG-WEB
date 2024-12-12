@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.channel-card {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.channel-card:hover {
+  transform: scale(1.05);
+}
